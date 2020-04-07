@@ -12,6 +12,11 @@ test('subtract subtracts numbers', () => {
   expect(result).toBe(expected)
 })
 
+/*
+exemplo da abstração de um testing framework (mocha, jest)
+resolve o problema de rodar vários testes de uma vez (try catch) e logar diretamente a linha do erro, sem precisar procurar no callstack.
+Identificar rapidamente o que está quebrado.
+*/
 function test(title, callback) {
   try {
     callback()
@@ -22,6 +27,9 @@ function test(title, callback) {
   }
 }
 
+/*
+exemplo da abstração de uma assertion library.
+*/
 function expect(actual) {
   return {
     toBe(expected) {
